@@ -118,7 +118,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 Feel free to reach out if you have any questions or suggestions:
 
 - GitHub: [@nathsagar96](https://github.com/nathsagar96)
-- Email: [nathsagar96@gmail.com](mailto:nathsagar96@gamil.com)
+- Email: [nathsagar96@gmail.com](mailto:nathsagar96@gmail.com)
 
 ---
 
