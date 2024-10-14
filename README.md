@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# 🌍 COVID-19 Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **COVID-19 Tracker** built using **React**, **TailwindCSS**, and **Chart.js**, which provides real-time global and country-specific COVID-19 data. It features a responsive UI with data visualization for better insights.
 
-## Available Scripts
+![COVID Tracker Preview](covid-tracker-preview.jpeg)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- 🌐 **Global & Country-specific Data**: Track COVID-19 statistics like cases, recovered, and deaths globally or by selecting any country.
+- 📊 **Interactive Charts**: Visualize COVID-19 data using interactive line charts powered by **Chart.js**.
+- 🌍 **Country Picker**: Choose from a wide range of countries to see localized COVID-19 data.
+- 📱 **Fully Responsive**: The tracker works seamlessly across mobile, tablet, and desktop devices.
+- 🎨 **TailwindCSS** for a clean and modern UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: JavaScript library for building user interfaces.
+- **TailwindCSS**: Utility-first CSS framework for custom styling.
+- **Chart.js**: Visualization library for rendering the COVID-19 statistics in charts.
+- **Disease.sh API**: Provides real-time COVID-19 data.
 
-### `npm test`
+## 🚀 Live Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Check out the live demo: [COVID-19 Tracker Live](https://nathsagar96.github.io/covid-tracker)
 
-### `npm run build`
+## 🛠️ Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps to set up the project locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/nathsagar96/covid-tracker.git
+   cd covid-tracker
+   ```
 
-### `npm run eject`
+2. **Install dependencies:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Ensure all required dependencies are installed by running:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the development server:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Once installed, you can run the app locally:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   The app should now be running on `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ API Integration
 
-### Code Splitting
+This tracker fetches real-time data from the **Disease.sh** COVID-19 API:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Global Data**: `https://disease.sh/v3/covid-19/all`
+- **Country Data**: `https://disease.sh/v3/covid-19/countries/{country}`
 
-### Analyzing the Bundle Size
+## 🎨 TailwindCSS Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ensure you have **TailwindCSS** configured in your project by adding the following to your `tailwind.config.js` file:
 
-### Making a Progressive Web App
+```js
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📂 Project Structure
 
-### Advanced Configuration
+Here's an overview of the project's folder structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```text
+├── public
+├── src
+│   ├── api
+│   │   └── api.js           # API calls for fetching COVID-19 data
+│   ├── components
+│   │   ├── CountryPicker.js  # Country selector component
+│   │   ├── Statistics.js     # Displays COVID statistics (cases, recovered, deaths)
+│   │   └── Chart.js          # Chart visualization component
+│   ├── App.js                # Main app structure
+│   └── index.js              # Entry point
+├── tailwind.config.js
+├── package.json
+└── README.md
+```
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-### `npm run build` fails to minify
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Push to your branch (`git push origin feature-branch`).
+5. Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Contact
+
+Feel free to reach out if you have any questions or suggestions:
+
+- GitHub: [@nathsagar96](https://github.com/nathsagar96)
+- Email: [nathsagar96@gmail.com](mailto:nathsagar96@gamil.com)
+
+---
+
+## 🌟 Acknowledgements
+
+- **Disease.sh API** for providing real-time COVID-19 data.
+- **React.js** and **TailwindCSS** communities for their extensive documentation and support.
+- **ChatGPT** for providing guidance and suggestions for improvement.

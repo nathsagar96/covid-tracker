@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CountryPicker from './components/CountryPicker';
 import Statistics from './components/Statistics';
 import Chart from './components/Chart';
-import { fetchGlobalData, fetchCountries, fetchCountryData } from './api/covidApi';
+import { fetchGlobalData, fetchCountries, fetchCountryData } from './api/api';
 
 const CovidTracker = () => {
   const [data, setData] = useState({});
